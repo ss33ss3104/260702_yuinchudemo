@@ -813,25 +813,23 @@ section { background: var(--c-bg); }
 .benefit__title { font-size: 18px; font-weight: 800; margin: 0; line-height: 1.4; }
 .benefit__desc { font-size: 14px; color: var(--c-text); margin: 0; }
 
-/* Blog */
-.blog__grid {
+/* Activity report */
+.activity__grid {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 26px;
 }
 .activity-event {
   overflow: hidden;
-  background: #fff;
-  border: var(--b-thick) solid var(--c-border);
-  border-radius: 18px;
+  background: transparent;
+  border-top: var(--b-thick) solid var(--c-border);
 }
 .activity-event__meta {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  padding: 14px 16px 12px;
-  border-bottom: var(--b-thick) solid var(--c-border);
+  padding: 14px 0 12px;
 }
 .activity-event__date {
   flex: 0 0 auto;
@@ -849,14 +847,12 @@ section { background: var(--c-bg); }
 }
 .activity-event__photos {
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
-          mask: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
 }
 .activity-event__track {
   display: flex;
-  gap: 5px;
+  gap: 0;
   width: max-content;
-  padding: 12px;
+  padding: 0;
   animation: activity-scroll 34s linear infinite;
   will-change: transform;
 }
@@ -874,9 +870,7 @@ section { background: var(--c-bg); }
 .activity-photo {
   flex: 0 0 clamp(118px, 26vw, 154px);
   aspect-ratio: 1.12 / 1;
-  background: var(--c-soft);
-  border: var(--b-thin) solid var(--c-border);
-  border-radius: 12px;
+  margin: 0;
   overflow: hidden;
 }
 .activity-photo img {
@@ -1016,7 +1010,7 @@ section { background: var(--c-bg); }
 /* Mobile-first comparison layout.
    Keeps the Beach Clean tone while presenting the page as a phone-width LP on desktop. */
 .mobile-first-layout {
-  --phone-w: 560px;
+  --phone-w: 700px;
   --gutter: clamp(22px, 6vw, 34px);
   --section-y: clamp(64px, 12vw, 92px);
   background:
@@ -1236,7 +1230,7 @@ section { background: var(--c-bg); }
 
 .mobile-first-layout .steps,
 .mobile-first-layout .benefits__grid,
-.mobile-first-layout .blog__grid {
+.mobile-first-layout .activity__grid {
   grid-template-columns: 1fr;
   gap: 18px;
 }
@@ -1316,7 +1310,7 @@ section { background: var(--c-bg); }
 
 .mobile-first-layout .activity-event__meta {
   display: block;
-  padding: 13px 15px 11px;
+  padding: 13px 0 11px;
 }
 
 .mobile-first-layout .activity-event__date {
@@ -1325,7 +1319,7 @@ section { background: var(--c-bg); }
 }
 
 .mobile-first-layout .activity-photo {
-  flex-basis: 126px;
+  flex-basis: clamp(118px, 31vw, 148px);
 }
 
 .mobile-first-layout .donation__inner {
@@ -1383,7 +1377,7 @@ section { background: var(--c-bg); }
 @media (min-width: 720px) {
   .mobile-first-layout .steps,
   .mobile-first-layout .benefits__grid,
-  .mobile-first-layout .blog__grid {
+  .mobile-first-layout .activity__grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1521,7 +1515,7 @@ section { background: var(--c-bg); }
   <a href="#about">ABOUT</a>
   <a href="#entry">ENTRY</a>
   <a href="#benefits">BENEFITS</a>
-  <a href="#blog">BLOG</a>
+  <a href="#activity">REPORT</a>
   <a href="#donation">DONATION</a>
   <a href="#supporters">SUPPORTERS</a>
   <a href="#form">CONTACT</a>
@@ -1546,7 +1540,7 @@ section { background: var(--c-bg); }
         <img class="fv-part fv-part--05" src="assets/beach-clean-lp/hero-parts/character-05.png" alt="">
         <img class="fv-part fv-part--06" src="assets/beach-clean-lp/hero-parts/character-06.png" alt="">
       </div>
-      <p class="fv__sub">旅の途中で<span class="uline uline--blue">参加しよう</span>。</p>
+      <p class="fv__sub">旅の途中で、<span class="uline uline--blue">島とつながる</span>。</p>
       <div class="fv__cta">
         <a href="#entry" class="btn btn--primary">参加方法を見る</a>
         <a href="#about" class="btn">YUINCHUとは</a>
@@ -1675,13 +1669,13 @@ section { background: var(--c-bg); }
   </svg>
 </section>
 
-<!-- BLOG -->
-<section id="blog" class="container">
-  <span class="section-label reveal"><span class="section-label__num">04</span><span class="section-label__rule"></span>BLOG</span>
+<!-- ACTIVITY REPORT -->
+<section id="activity" class="container">
+  <span class="section-label reveal"><span class="section-label__num">04</span><span class="section-label__rule"></span>ACTIVITY REPORT</span>
   <h2 class="section-title reveal" data-stagger="1"><span class="title-mark title-mark--blue">活動記録</span></h2>
   <p class="section-lead reveal" data-stagger="2">これまでのビーチクリーンの様子。</p>
 
-  <div class="blog__grid reveal" data-stagger="3">
+  <div class="activity__grid reveal" data-stagger="3">
     <article class="activity-event">
       <div class="activity-event__meta">
         <span class="activity-event__date">2026.04.20</span>
