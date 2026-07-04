@@ -935,10 +935,10 @@ body.hiroha-layout {
 .about-page .about-hero {
   position: relative;
   z-index: 2;
-  min-height: 78svh;
+  min-height: 62svh;
   display: flex;
   align-items: center;
-  padding: 122px 0 46px;
+  padding: 112px 0 24px;
 }
 
 .about-page .about-hero__inner {
@@ -1005,22 +1005,23 @@ body.hiroha-layout {
 }
 
 .about-page .directors {
-  padding-top: 84px;
-  padding-bottom: 110px;
+  padding-top: 82px;
+  padding-bottom: 104px;
   background: rgba(252, 250, 242, 0.78);
 }
 
 .about-page .director-feature {
   display: flex;
   justify-content: center;
-  margin-top: 58px;
-  margin-bottom: 72px;
+  margin-top: 54px;
+  margin-bottom: 66px;
 }
 
 .about-page .director-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 46px 24px;
+  gap: 58px 22px;
+  align-items: start;
 }
 
 .about-page .director-card {
@@ -1029,20 +1030,21 @@ body.hiroha-layout {
 }
 
 .about-page .director-card__photo {
-  width: 100%;
+  width: min(100%, 158px);
   aspect-ratio: 1;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
   border-radius: 50%;
   overflow: hidden;
   background: #9b9b9b;
 }
 
 .about-page .director-card--primary {
-  width: min(64%, 260px);
+  width: min(64%, 230px);
 }
 
 .about-page .director-card--primary .director-card__photo {
-  margin-bottom: 22px;
+  width: min(100%, 178px);
+  margin-bottom: 20px;
 }
 
 .about-page .director-card__photo img {
@@ -1057,14 +1059,15 @@ body.hiroha-layout {
   place-items: center;
   color: #fff;
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1.05rem, 3.4vw, 1.58rem);
   line-height: 1;
+  border: 1px solid rgba(15, 23, 42, 0.22);
 }
 
 .about-page .director-card h3 {
-  margin: 0 0 7px;
+  margin: 0 0 5px;
   font-family: var(--font-serif);
-  font-size: clamp(1.04rem, 4.2vw, 1.36rem);
+  font-size: clamp(1.02rem, 3vw, 1.22rem);
   font-weight: 500;
   line-height: 1.4;
 }
@@ -1072,14 +1075,9 @@ body.hiroha-layout {
 .about-page .director-card p {
   color: #243140;
   font-family: var(--font-serif);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   line-height: 1.5;
   text-align: center;
-}
-
-.about-page .director-card--placeholder h3,
-.about-page .director-card--placeholder p {
-  color: rgba(15, 23, 42, 0.46);
 }
 
 .about-page .about-profile {
@@ -1211,8 +1209,8 @@ body.hiroha-layout {
   }
 
   .about-page .about-hero {
-    min-height: 74svh;
-    padding: 108px 0 42px;
+    min-height: 58svh;
+    padding: 98px 0 24px;
   }
 
   .about-page .about-hero__inner {
@@ -1239,11 +1237,28 @@ body.hiroha-layout {
 
   .about-page .director-feature {
     margin-top: 44px;
-    margin-bottom: 54px;
+    margin-bottom: 52px;
   }
 
   .about-page .director-grid {
-    gap: 34px 14px;
+    gap: 42px 12px;
+  }
+
+  .about-page .director-card__photo {
+    width: min(100%, 116px);
+    margin-bottom: 14px;
+  }
+
+  .about-page .director-card--primary .director-card__photo {
+    width: min(100%, 154px);
+  }
+
+  .about-page .director-card h3 {
+    font-size: clamp(0.96rem, 4vw, 1.08rem);
+  }
+
+  .about-page .director-card p {
+    font-size: 0.72rem;
   }
 
   .about-page .about-profile {
