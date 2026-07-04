@@ -436,9 +436,10 @@ section { background: var(--c-bg); }
   pointer-events: none;
   user-select: none;
   opacity: 0;
-  transform: translateY(18px) scale(.9);
+  transform: translateY(18px) scale(.9) rotate(var(--fv-rotate, 0deg));
   animation: fv-pop .72s cubic-bezier(.2,.9,.2,1.12) forwards;
   filter: drop-shadow(0 4px 0 rgba(0,0,0,.12));
+  transform-origin: center bottom;
 }
 .fv-part--logo {
   left: 8%;
@@ -449,8 +450,8 @@ section { background: var(--c-bg); }
 }
 .fv-part--01 {
   left: 29%;
-  top: 0;
-  width: 20%;
+  top: 1%;
+  width: 23%;
   z-index: 3;
   animation-delay: .42s;
 }
@@ -483,16 +484,17 @@ section { background: var(--c-bg); }
   animation-delay: 1.14s;
 }
 .fv-part--06 {
-  right: 8%;
-  bottom: 0;
+  right: 1%;
+  bottom: -1%;
   width: 22%;
   z-index: 5;
   animation-delay: 1.32s;
+  --fv-rotate: 7deg;
 }
 @keyframes fv-pop {
-  0% { opacity: 0; transform: translateY(18px) scale(.9); }
-  72% { opacity: 1; transform: translateY(-4px) scale(1.03); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% { opacity: 0; transform: translateY(18px) scale(.9) rotate(var(--fv-rotate, 0deg)); }
+  72% { opacity: 1; transform: translateY(-4px) scale(1.03) rotate(var(--fv-rotate, 0deg)); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(var(--fv-rotate, 0deg)); }
 }
 
 /* JP subtitle next to CAMP — vertical center alignment with CAMP */
@@ -1841,9 +1843,9 @@ section { background: var(--c-bg); }
 
 <footer class="site-footer">
   <div class="container">
-    <div class="brand">CLUB YUINCHU<small>MIYAKOJIMA · BEACH CLEAN</small></div>
+    <div class="brand">YUINCHU<small>MIYAKOJIMA · BEACH CLEAN</small></div>
     <p>旅の途中で、島とつながる。</p>
-    <p>© 2026 CLUB YUINCHU</p>
+    <p>© 2026 YUINCHU</p>
   </div>
 </footer>
 
